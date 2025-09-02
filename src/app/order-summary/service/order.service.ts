@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { API_URL_Order } from '../../constants/url';
+import { K8sExternalIp } from '../../constants/url';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { API_URL_Order } from '../../constants/url';
 
 export class OrderService {
 
-  private apiUrl = API_URL_Order+'/order/saveOrder';
+  private apiUrl = K8sExternalIp+'/order/saveOrder';
 
   constructor(private http: HttpClient) { }
 
